@@ -6,31 +6,49 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            bool check = true;
-
-            while (check == true)
+            int a;
+            double b;
+            long c;
+            while (true)
             {
                 try
                 {
-                    check = false;
-
                     Console.WriteLine("Enter a: ");
-                    int a = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter b: ");
-                    double b = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Enter c: ");
-                    long c = Convert.ToInt64(Console.ReadLine());
-                    Console.WriteLine($" Number A: {a}\n Number B: {b}\n Number C: {c}");
-
+                    a = Convert.ToInt32(Console.ReadLine());
+                    break;
                 }
                 catch
                 {
-                    Console.WriteLine("Please, enter correct values!");
-                    check = true;
+                    Console.WriteLine("Enter correct value!");
                 }
             }
-
-
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter b: ");
+                    b = Convert.ToDouble(Console.ReadLine());
+                    break;
+                }
+                catch
+                {
+                    Console.WriteLine("Enter correct value!");
+                }
+            }
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter c: ");
+                    c = Convert.ToInt64(Console.ReadLine());
+                    break;
+                }
+                catch
+                {
+                    Console.WriteLine("Enter correct value!");
+                }
+            }
+            Console.WriteLine($" Number A: {a}\n Number B: {b}\n Number C: {c}");
         }
     }
 }
